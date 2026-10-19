@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('name');
             $table->unsignedInteger('priority');
             $table->text('description')->nullable();
-            $table->enum('status', ['pending', 'in_progress', 'completed'])->default('pending');
             $table->index(['project_id', 'priority']);
             $table->timestamps();
         });
